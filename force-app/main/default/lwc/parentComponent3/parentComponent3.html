@@ -1,0 +1,11 @@
+<template>
+    <ul>
+    <lightning-card title="Course Details">
+    <template for:each={courseData} for:item="data">
+    <li key={data.courseCode}>
+    <c-child-component3 course-details={data}></c-child-component3>
+    </li>
+    </template>    
+    </lightning-card>
+</ul>
+</template>

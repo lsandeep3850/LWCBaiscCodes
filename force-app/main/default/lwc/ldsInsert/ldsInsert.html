@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Account Data">
+        <lightning-layout>
+        <lightning-layout-item size="6" padding="around-small">
+            <lightning-input name="AccountName" label="Name" onchange={changeName}></lightning-input>
+            <lightning-input name="AccountPhone" label="Phone Number" onchange={changePhone}></lightning-input>
+            <lightning-input name="AccountWebsite" label="Website" onchange={changeWebsite}></lightning-input>
+            
+            <lightning-button label="Submit" onclick={createAccount}></lightning-button>
+        </lightning-layout-item>
+        </br>
+            <lightning-layout-item size="6" padding="around-small">
+               <p>New Record</p>
+               <p><lightning-formatted-text value={retAccountName}></lightning-formatted-text></p>
+               <p><lightning-formatted-phone value={retAccountPhone}></lightning-formatted-phone></p>
+               <p><lightning-formatted-url value={retAccountWebsite}></lightning-formatted-url></p>
+
+            
+        </lightning-layout-item>
+    </lightning-layout>
+    </lightning-card>
+</template>

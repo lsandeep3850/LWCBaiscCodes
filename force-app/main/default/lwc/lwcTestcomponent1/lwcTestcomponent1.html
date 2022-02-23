@@ -1,0 +1,38 @@
+<template>
+    <lightning-card>
+   <lightning-input label="First Number" name="FirstValue" onchange={changeHandler}></lightning-input>
+   <lightning-input label="Second Number" name="SecondValue" onchange={changeHandler}></lightning-input>
+  <p>THe calculated Value is {result}</p>
+  <br></br>
+   <lightning-button label="Add" onclick={addCal}></lightning-button>
+   <lightning-button label="Sub" onclick={subcal}></lightning-button>
+   <lightning-button label="Mul" onclick={mulcal}></lightning-button>
+   <lightning-button label="Div" onclick={divcal}></lightning-button>
+<br></br>
+    </lightning-card>
+<br></br>
+    <lightning-card>
+        <template for:each={course} for:item="data">
+            <p key={data}>
+                {data}
+            </p>
+        </template>
+<p></p>
+        <template iterator:it={course}>
+            <p key={it.value}>
+                {it.value}
+            </p>
+        </template>
+        <p></p>
+        <lightning-button label="Show" onclick={showDisplay}></lightning-button>
+<br></br>
+        <template if:true={display}>
+            <p>HI How are you</p>
+        </template>
+        <p></p>
+
+    </lightning-card>
+
+    <c-test-component2></c-test-component2>
+    
+</template>
